@@ -9,12 +9,6 @@ WebDFU — driver for working with DFU and DfuseDriver in a browser over [Web US
 - [ST DfuSe](http://dfu-util.sourceforge.net/dfuse.html) download and upload firmware
 - Switching from the runtime configuration to the DFU bootloader (DFU detach)
 
-## Install
-
-```shell
-npm i dfu
-```
-
 ## Usage
 
 Full example in: [webdfu/demo](https://github.com/Flipper-Zero/webdfu/tree/main/demo)
@@ -22,7 +16,7 @@ Full example in: [webdfu/demo](https://github.com/Flipper-Zero/webdfu/tree/main/
 Basic example:
 
 ```javascript
-import { WebDFU } from "dfu";
+import { WebDFU } from "https://code4fukui.github.io/webdfu/WebDFU.js";
 
 async function connect() {
   // Load the device by WebUSB
@@ -74,4 +68,10 @@ async function connect() {
   In HTML: <button id="connect-button">Connect</button>
 */
 document.getElementById("connect-button").addEventListener("click", connect);
+```
+
+## Build
+
+```sh
+deno bundle index.ts WebDFU.js --no-check
 ```

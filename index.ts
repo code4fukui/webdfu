@@ -1,4 +1,4 @@
-import { createNanoEvents } from "nanoevents";
+import { createNanoEvents } from "https://code4fukui.github.io/nanoevents/index.js";
 
 import {
   WebDFUSettings,
@@ -12,11 +12,11 @@ import {
   parseMemoryDescriptor,
   DFUseMemorySegment,
   DFUseCommands,
-} from "./core";
-import { WebDFUProcessErase, WebDFUProcessRead, WebDFUProcessWrite } from "./process";
-import { parseConfigurationDescriptor, WebDFUError } from "./core";
+} from "./core.ts";
+import { WebDFUProcessErase, WebDFUProcessRead, WebDFUProcessWrite } from "./process.ts";
+import { parseConfigurationDescriptor, WebDFUError } from "./core.ts";
 
-export * from "./core";
+export * from "./core.ts";
 
 export const dfuCommands = {
   DETACH: 0x00,

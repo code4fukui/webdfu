@@ -1,5 +1,5 @@
-import { createNanoEvents } from "nanoevents";
-import type { Emitter } from "nanoevents";
+import { createNanoEvents } from "https://code4fukui.github.io/nanoevents/index.js";
+import type { Emitter } from "https://code4fukui.github.io/nanoevents/index.js";
 
 export type WebDFUProcessReadEvents = {
   process: (done: number, total?: number) => void;
